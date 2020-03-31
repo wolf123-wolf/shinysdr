@@ -134,7 +134,7 @@ class _CapTableCollection(object):
 
 
 def generate_cap(slug=''):
-    cap = six.text_type(base64.urlsafe_b64encode(os.urandom(128 // 8)).replace(b'=', b''), 'ascii')
+    cap = six.text_type(base64.urlsafe_b64encode('ShinySDRShinySDR').replace(b'=', b''), 'ascii')
     if slug:
         cap = slug + '-' + cap
     return cap
